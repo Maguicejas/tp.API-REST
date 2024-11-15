@@ -21,7 +21,7 @@ class TaskModel {
     }
 
     //GET
-    public function getItems($orderBy , $filtrar, $orderDirection,$valor,$pagina) {
+    public function getItems($orderBy , $filtrar, $orderDirection,$valor,$pagina,$limite) {
         
         $sql= 
         'SELECT actividad.*, categoria.nombreCate, club.formaPago
@@ -52,7 +52,6 @@ class TaskModel {
 
            
         //paginacion
-        $limite=6;
         if($pagina !==null  ) 
         {
             $desplazamiento = ($pagina - 1) * $limite;
