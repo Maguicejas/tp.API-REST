@@ -96,7 +96,8 @@ ej fecha: https://localhost/Xsports-APIREST/api/actividad?filtrar=fecha&valor=20
 
 **Paginación**
 
-La paginación funciona de una manera similar a los filtros, solo que la página y el limite se miden mediante números(int) hasta que no haya más actividades
+La paginación funciona de una manera similar a los filtros, solo que la página y el limite se miden mediante números(int) hasta que no haya más actividades.
+
 
 ejemplo: https://localhost/Xsports-APIREST/api/actividad?pagina=1&limite=10  (La página 1 mostrara 10 actividades)
 
