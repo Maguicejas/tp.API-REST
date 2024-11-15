@@ -76,7 +76,7 @@ Ejemplo: se edita en la seccion body
 
 ej:https://localhost/Xsports-APIREST/api/actividad?orderBy=formaPago&orderDirection=DESC
 
-
+(Si no se pone el orderDirection se ordena por defecto de manera Ascendente)
 
 **Filtro por algún campo**
 
