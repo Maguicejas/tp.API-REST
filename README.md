@@ -3,12 +3,14 @@
 Magalí Agustina Cejas Mazzocchi (B)
 
 Ayelen Nataly Garcia Uriarte (A)
+
 **En este trabajo se utilizará la tabla Actividades**
 # ENDPOINTS
 
 **GET**
 
 -Para obtener un listado completo de actividades= https://localhost/Xsports-APIREST/api/actividad
+-Para ORDENAR un campo de la tabla= https://localhost/Xsports-APIREST/api/actividad?orderBy=Calificación&orderDirection=DESC . (Si no se pone nada en orderDirection por defecto es ascendente)
 
 -Para obtener una actividad en específico= https://localhost/Xsports-APIREST/api/actividad/2 . (El id de la actividad se puede visualizar en el GET para listar observando el ID_Actividad)
 
@@ -60,3 +62,27 @@ Ejemplo: se edita en la seccion body
 }
 
 # OPCIONALES
+**Ordenamiento por cualquier campo de la tabla**
+-Campos para ordenar:ID_Actividad,deporte,horario,fecha,Profesor,ID_Club,ID_Categoria,suspendida(siempre va a ser 0),img,Calificación,nombreCate y formaPago.
+
+-Los campos de tipo varchar son ordenados alfabéticamente y  los de tipo int numéricamente
+
+ej:https://localhost/Xsports-APIREST/api/actividad?orderBy=formaPago&orderDirection=DESC
+
+**Filtro por algún campo**
+-Campos para filtrar= ID_Actividad,deporte,horario,fecha,Profesor,ID_Club,ID_Categoria,Calificación,nombreCate y formaPago.
+
+-Valores= se recomienda fijarse de que tipo es el campo(varchar o int), y luego insertar el valor buscado. A continuación se observan algunos ejemplos para utilizar el filtrado.
+
+ej ID_Actividad:https://localhost/Xsports-APIREST/api/actividad?filtrar=ID_Actividad&valor=20
+
+ej deporte:https://localhost/Xsports-APIREST/api/actividad?filtrar=deporte&valor=Ritmos
+
+ej horario:https://localhost/Xsports-APIREST/api/actividad?filtrar=horario&valor=17:00:00
+
+ej Profesor:https://localhost/Xsports-APIREST/api/actividad?filtrar=Profesor&valor=Tomas Diaz
+
+ej fecha: https://localhost/Xsports-APIREST/api/actividad?filtrar=fecha&valor=2024-09-16
+
+**Paginación**
+La paginación funciona de una manera similar a los filtros
