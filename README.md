@@ -7,6 +7,7 @@ Ayelen Nataly Garcia Uriarte (A)
 #ENDPOINTS
 
 **GET**
+
 -Para obtener un listado completo de actividades= https://localhost/Xsports-APIREST/api/actividad
 -Para obtener una actividad en específico= https://localhost/Xsports-APIREST/api/actividad/2 . (El id de la actividad se puede visualizar en el GET para listar observando el ID_Actividad)
 
@@ -23,8 +24,11 @@ Ejemplo: se edita en la seccion body
 
 {
   "horario": "17:00:00",
+  
   "fecha": "2024-09-16",
+  
   "ID_Club": 8,
+  
   "Calificación": 4
 }
 
@@ -34,13 +38,21 @@ Los campos a editar son: deporte,horario,fecha,ID_Club(8=efectivo,9=débito,10=c
 Ejemplo: se edita en la seccion body
 {
   "deporte": "Water-Polo",
+  
   "horario": "18:00:00",
+  
   "fecha": "2024-11-16",
+  
   "Profesor": "Franco Gilona",
+  
   "ID_Club": 8,
+  
   "ID_Categoria": 1,
+  
   "suspendida": 0,
+  
   "img": "",
+  
   "Calificación": 5
 }
 
