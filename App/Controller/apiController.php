@@ -36,8 +36,12 @@ Class ApiController{
                $pagina = $req->query->pagina;
            }
    
-
-        $tasks = $this->modelo->getItems($orderBy,$filtrar,$orderDirection,$valor,$pagina);
+           $limite=6;
+          if(isset($req->query->limite)) {
+            $limite = $req->query->limite;
+        }
+        
+        $tasks = $this->modelo->getItems($orderBy,$filtrar,$orderDirection,$valor,$pagina,$limite);
         
         // mando las tareas a la vista
         return $this->vista->response($tasks);
