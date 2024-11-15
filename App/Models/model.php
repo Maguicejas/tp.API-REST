@@ -52,7 +52,7 @@ class TaskModel {
 
            
         //paginacion
-        if($pagina !==null  ) 
+        if($pagina !==null && $limite !==null   ) 
         {
             $desplazamiento = ($pagina - 1) * $limite;
             $sql .= ' LIMIT ' .(int)$limite . ' OFFSET ' . (int)$desplazamiento; //asegura que los valores sean números enteros
