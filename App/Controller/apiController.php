@@ -36,7 +36,7 @@ Class ApiController{
                $pagina = $req->query->pagina;
            }
    
-           $limite=6;
+           $limite=null;
           if(isset($req->query->limite)) {
             $limite = $req->query->limite;
         }
