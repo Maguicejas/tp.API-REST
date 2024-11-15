@@ -38,6 +38,7 @@ Ejemplo: se edita en la seccion body
 }
 
 **POST**
+
 -Para agregar una actividad= https://localhost/Xsports-APIREST/api/actividad 
 
 Los campos a editar son: deporte,horario,fecha,ID_Club(8=efectivo,9=débito,10=crédito),ID_Categoria(1=Deportes acuáticos,2=Deportes de fuerza,3=Deportes en grupo,4=Danza,5=Deportes al aire libre,6=Atletismo,8=Hockey,26=Lucha Libre) ,suspendidad=0 ,img y Calificación.
