@@ -4,11 +4,12 @@ Magalí Agustina Cejas Mazzocchi (B)
 
 Ayelen Nataly Garcia Uriarte (A)
 **En este trabajo se utilizará la tabla Actividades**
-#ENDPOINTS
+# ENDPOINTS
 
 **GET**
 
 -Para obtener un listado completo de actividades= https://localhost/Xsports-APIREST/api/actividad
+
 -Para obtener una actividad en específico= https://localhost/Xsports-APIREST/api/actividad/2 . (El id de la actividad se puede visualizar en el GET para listar observando el ID_Actividad)
 
 **DELETE**
@@ -35,6 +36,7 @@ Ejemplo: se edita en la seccion body
 **POST**
 -Para agregar una actividad= https://localhost/Xsports-APIREST/api/actividad . 
 Los campos a editar son: deporte,horario,fecha,ID_Club(8=efectivo,9=débito,10=crédito),ID_Categoria(1=Deportes acuáticos,2=Deportes de fuerza,3=Deportes en grupo,4=Danza,5=Deportes al aire libre,6=Atletismo,8=Hockey,26=Lucha Libre) ,suspendidad=0 ,img y Calificación.
+
 Ejemplo: se edita en la seccion body
 {
   "deporte": "Water-Polo",
@@ -54,6 +56,7 @@ Ejemplo: se edita en la seccion body
   "img": "",
   
   "Calificación": 5
+  
 }
 
-#OPCIONALES
+# OPCIONALES
