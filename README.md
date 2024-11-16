@@ -80,7 +80,7 @@ ej:https://localhost/Xsports-APIREST/api/actividad?orderBy=formaPago&orderDirect
 
 **Filtro por algún campo**
 
--Campos para filtrar= ID_Actividad,deporte,horario,fecha,Profesor,ID_Club,ID_Categoria,Calificación,nombreCate y formaPago.
+-Campos para filtrar= ID_Actividad,deporte,horario,fecha,Profesor,Calificación,nombreCate y formaPago.
 
 -Valores= se recomienda fijarse de que tipo es el campo(varchar o int), y luego insertar el valor buscado. A continuación se observan algunos ejemplos para utilizar el filtrado.
 
