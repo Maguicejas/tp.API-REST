@@ -105,7 +105,7 @@ Class ApiController{
            $limite=null;
               if(isset($req->query->limite)) {
                 $limite = $req->query->limite;
-                   if($limite < 0) {
+                   if($limite < 0 || !is_numeric($limite)) {
                     return $this->vista->response("El número debe ser positivo", 400);
             }
         }
