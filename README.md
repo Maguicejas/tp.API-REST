@@ -103,3 +103,6 @@ La paginación funciona de una manera similar a los filtros, solo que la página
 
 ejemplo: https://localhost/Xsports-APIREST/api/actividad?pagina=1&limite=10  (La página 1 mostrara 10 actividades)
 
+# Nota
+
+Si se quiere filtrar el campo 'Calificación' con valor=0(cero), en vez de poner el valor númerico se debe poner la letra o
