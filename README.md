@@ -44,6 +44,7 @@ Ejemplo: **se edita en la seccion body**
 Los campos a editar son: deporte,horario,fecha,ID_Club(8=efectivo,9=débito,10=crédito),ID_Categoria(1=Deportes acuáticos,2=Deportes de fuerza,3=Deportes en grupo,4=Danza,5=Deportes al aire libre,6=Atletismo,8=Hockey,26=Lucha Libre) ,suspendida=0 ,img(url) y Calificación.
 
 Ejemplo: **se edita en la seccion body**
+
 {
   "deporte": "Water-Polo",
   
