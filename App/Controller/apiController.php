@@ -97,7 +97,7 @@ Class ApiController{
            $pagina = 1;
                if(isset($req->query->pagina)) {
                    $pagina = $req->query->pagina;
-                    if($pagina < 0) {
+                    if($pagina <= 0) {
                     return $this->vista->response("El número debe ser positivo", 400);
                }
            }
