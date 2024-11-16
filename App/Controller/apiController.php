@@ -14,31 +14,100 @@ Class ApiController{
     //GET
     public function getAllActividades($req,$res){
         
-       $filtrar= null;
-       if(isset($req->query->filtrar)) {
-        $filtrar = $req->query->filtrar;}
-    
-        $valor= null;
-        if(isset($req->query->valor)) {
-        $valor = $req->query->valor;
-         }
+           $filtrar= null;
+           if(isset($req->query->filtrar)) {
+            $filtrar = $req->query->filtrar;
 
-        $orderDirection = 'ASC';
-        if (isset($req->query->orderDirection)) {
-            $orderDirection = $req->query->orderDirection;
-        }
-        $orderBy = false;
-        if(isset($req->query->orderBy))
+             switch($filtrar){
+                    case 'deporte':
+                        $filtrar = $req->query->filtrar;break;
+                    case 'ID_Actividad':
+                        $filtrar = $req->query->filtrar;break;
+                    case 'horario':
+                        $filtrar = $req->query->filtrar;break;
+                    case 'fecha':
+                            $filtrar = $req->query->filtrar;break;
+                    case 'Profesor':
+                        $filtrar = $req->query->filtrar;break;
+                               
+                    case 'Calificación':
+                        $filtrar = $req->query->filtrar;break;
+                    case 'nombreCate':
+                        $filtrar = $req->query->filtrar;break;
+                    case 'formaPago':
+                        $filtrar = $req->query->filtrar;break;
+                                        
+                                
+                   default: return $this->vista->response("El campo cargado es erróneo", 400);
+            } 
+           }
+        
+            $valor= null;
+            if(isset($req->query->valor)) {
+            $valor = $req->query->valor;
+                 if($valor < 0) {
+                return $this->vista->response("El número debe ser positivo", 400);
+            }
+             }
+            
+
+            $orderDirection = 'ASC';
+            if (isset($req->query->orderDirection)) {
+                $orderDirection = $req->query->orderDirection;
+            }
+        
+           $orderBy = false;
+        if(isset($req->query->orderBy)){
            $orderBy = $req->query->orderBy;
+            
+           switch($orderBy){
+                case 'deporte':
+                    $orderBy = $req->query->orderBy;break;
+                case 'ID_Actividad':
+                    $orderBy = $req->query->orderBy;break;
+                case 'horario':
+                    $orderBy= $req->query->orderBy;break;
+                case 'fecha':
+                    $orderBy = $req->query->orderBy;break;
+                case 'Profesor':
+                    $orderBy = $req->query->orderBy;break;
+                case 'ID_Club':
+                    $orderBy = $req->query->orderBy;break;
+                 case 'ID_Categoria':
+                    $orderBy = $req->query->orderBy;break;  
+                case 'img':
+                    $orderBy = $req->query->orderBy;break;   
+                case 'suspendida':
+                    $orderBy = $req->query->orderBy;break;
+                case 'Calificación':
+                    $orderBy = $req->query->orderBy;break;
+                case 'nombreCate':
+                    $orderBy = $req->query->orderBy;break;
+                case 'formaPago':
+                    $orderBy = $req->query->orderBy;break;
+                                    
+                            
+               default: return $this->vista->response("El campo cargado es erróneo", 400);
+        } 
+        
+        }
            
+
+        
            $pagina = 1;
-           if(isset($req->query->pagina)) {
-               $pagina = $req->query->pagina;
+               if(isset($req->query->pagina)) {
+                   $pagina = $req->query->pagina;
+                    if($pagina < 0) {
+                    return $this->vista->response("El número debe ser positivo", 400);
+               }
            }
    
            $limite=null;
-          if(isset($req->query->limite)) {
-            $limite = $req->query->limite;
+              if(isset($req->query->limite)) {
+                $limite = $req->query->limite;
+                   if($limite < 0) {
+                    return $this->vista->response("El número debe ser positivo", 400);
+            }
         }
         
         $tasks = $this->modelo->getItems($orderBy,$filtrar,$orderDirection,$valor,$pagina,$limite);
